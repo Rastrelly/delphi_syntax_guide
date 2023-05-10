@@ -445,7 +445,7 @@ begin
   fV1:=20.3;
   fV2:=13.1;
   sV1:='Test';
-  vB1:=false;
+  bV1:=false;
 
   //викликаємо нашу процедуру
   procedure_name(iV1,fV1,fV2,sV1);

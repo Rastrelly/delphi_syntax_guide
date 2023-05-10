@@ -17,16 +17,17 @@
         <Filename Value="usyntguide.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="434"/>
-        <CursorPos X="5" Y="448"/>
+        <TopLine Value="88"/>
+        <CursorPos X="33" Y="99"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="10">
+    <JumpHistory HistoryIndex="9">
       <Position>
         <Filename Value="usyntguide.pas"/>
         <Caret Line="61" Column="29" TopLine="46"/>
@@ -46,10 +47,6 @@
       <Position>
         <Filename Value="usyntguide.pas"/>
         <Caret Line="310" Column="16" TopLine="302"/>
-      </Position>
-      <Position>
-        <Filename Value="usyntguide.pas"/>
-        <Caret Line="122" Column="53" TopLine="366"/>
       </Position>
       <Position>
         <Filename Value="usyntguide.pas"/>
