@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="psyntguide.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="25" Y="24"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="usyntguide.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="434"/>
+        <CursorPos X="5" Y="448"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="10">
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="61" Column="29" TopLine="46"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="63" Column="29" TopLine="48"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="335" Column="31" TopLine="324"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="318" TopLine="314"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="310" Column="16" TopLine="302"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="122" Column="53" TopLine="366"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="124" Column="53" TopLine="124"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="453" Column="3" TopLine="438"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="462" Column="71" TopLine="450"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="467" Column="3" TopLine="452"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="448" Column="5" TopLine="441"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

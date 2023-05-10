@@ -1,0 +1,71 @@
+object Form1: TForm1
+  Left = 293
+  Height = 240
+  Top = 103
+  Width = 320
+  Caption = 'Form1'
+  ClientHeight = 240
+  ClientWidth = 320
+  LCLVersion = '2.2.6.0'
+  object btnGeneralStuff: TButton
+    Left = 10
+    Height = 25
+    Top = 32
+    Width = 99
+    Caption = 'btnGeneralStuff'
+    OnClick = btnGeneralStuffClick
+    TabOrder = 0
+  end
+  object memoData: TMemo
+    Left = 112
+    Height = 90
+    Top = 16
+    Width = 150
+    Lines.Strings = (
+      'memoData'
+    )
+    TabOrder = 1
+  end
+  object Label1: TLabel
+    Left = 10
+    Height = 15
+    Top = 10
+    Width = 34
+    Caption = 'Label1'
+    ParentColor = False
+  end
+  object btnArrays: TButton
+    Left = 10
+    Height = 25
+    Top = 64
+    Width = 99
+    Caption = 'btnArrays'
+    OnClick = btnArraysClick
+    TabOrder = 2
+  end
+  object btnSubprograms: TButton
+    Left = 8
+    Height = 25
+    Top = 96
+    Width = 101
+    Caption = 'btnSubprograms'
+    OnClick = btnSubprogramsClick
+    TabOrder = 3
+  end
+  object edProcName: TEdit
+    Left = 10
+    Height = 23
+    Top = 128
+    Width = 80
+    TabOrder = 4
+    Text = 'edProcName'
+  end
+  object chbBoxFunc: TCheckBox
+    Left = 8
+    Height = 19
+    Top = 160
+    Width = 86
+    Caption = 'chbBoxFunc'
+    TabOrder = 5
+  end
+end
