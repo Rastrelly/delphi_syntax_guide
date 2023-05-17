@@ -8,9 +8,9 @@
       <Unit>
         <Filename Value="psyntguide.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="1"/>
-        <CursorPos X="25" Y="24"/>
-        <UsageCount Value="20"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="28" Y="25"/>
+        <UsageCount Value="31"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -20,53 +20,141 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="88"/>
-        <CursorPos X="33" Y="99"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="530"/>
+        <CursorPos X="25" Y="551"/>
+        <UsageCount Value="31"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\rtl\inc\objpash.inc"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="192"/>
+        <CursorPos X="23" Y="206"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="9">
-      <Position>
-        <Filename Value="usyntguide.pas"/>
-        <Caret Line="61" Column="29" TopLine="46"/>
-      </Position>
-      <Position>
-        <Filename Value="usyntguide.pas"/>
-        <Caret Line="63" Column="29" TopLine="48"/>
-      </Position>
-      <Position>
-        <Filename Value="usyntguide.pas"/>
-        <Caret Line="335" Column="31" TopLine="324"/>
-      </Position>
-      <Position>
-        <Filename Value="usyntguide.pas"/>
-        <Caret Line="318" TopLine="314"/>
-      </Position>
-      <Position>
-        <Filename Value="usyntguide.pas"/>
-        <Caret Line="310" Column="16" TopLine="302"/>
-      </Position>
-      <Position>
-        <Filename Value="usyntguide.pas"/>
-        <Caret Line="124" Column="53" TopLine="124"/>
-      </Position>
-      <Position>
-        <Filename Value="usyntguide.pas"/>
-        <Caret Line="453" Column="3" TopLine="438"/>
-      </Position>
-      <Position>
-        <Filename Value="usyntguide.pas"/>
-        <Caret Line="462" Column="71" TopLine="450"/>
-      </Position>
-      <Position>
-        <Filename Value="usyntguide.pas"/>
-        <Caret Line="467" Column="3" TopLine="452"/>
-      </Position>
+    <JumpHistory HistoryIndex="29">
       <Position>
         <Filename Value="usyntguide.pas"/>
         <Caret Line="448" Column="5" TopLine="441"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="129" Column="57" TopLine="122"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="550" Column="21" TopLine="535"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="28" Column="22" TopLine="14"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="80" Column="37" TopLine="66"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="554" Column="20" TopLine="535"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="569" Column="9" TopLine="541"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="570" Column="9" TopLine="542"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="577" Column="9" TopLine="549"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="568" Column="18" TopLine="426"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="512" Column="3" TopLine="509"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="81" Column="17" TopLine="68"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="581" Column="27" TopLine="561"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="82" Column="56" TopLine="59"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="514" Column="51" TopLine="500"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="555" Column="29" TopLine="539"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="566" Column="17" TopLine="567"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="517" Column="19" TopLine="512"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="526" Column="35" TopLine="505"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="524" Column="7" TopLine="500"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="531" Column="19" TopLine="516"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="599" Column="33" TopLine="500"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="639" Column="3" TopLine="614"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="641" Column="13" TopLine="615"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="102" Column="13" TopLine="83"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="84" Column="39" TopLine="64"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="103" Column="59" TopLine="88"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="641" Column="33" TopLine="617"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="102" Column="16" TopLine="88"/>
+      </Position>
+      <Position>
+        <Filename Value="usyntguide.pas"/>
+        <Caret Line="421" Column="38" TopLine="410"/>
       </Position>
     </JumpHistory>
     <RunParams>

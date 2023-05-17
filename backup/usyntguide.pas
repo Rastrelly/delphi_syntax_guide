@@ -18,6 +18,92 @@ uses
 //об'явлення нових типів
 type
 
+  //перевизначення простого типу
+  TInt = integer;
+
+  //перевизначення складного типу
+  TArr1x100 = array [1..100]of integer;
+    //визначаємо як тип масив із заданим діапазоном індексів (див.
+    //статичні масиви)
+  TArrReal = array of real;
+    //цей тип визначає динамічний масив real як окремий тип
+
+  //структурний тип ("запис")
+  TDataStructEx = record
+    //вказуємо, які поля даних входять до структури
+    a,b:integer; //два поля типу integer
+    rlC:real;    //поле типу real
+    arrFld:array of real; //поле-масив
+    //полем може бути будь=який тип
+  end;
+
+
+  {TOurClass}
+  //тип класу
+  TOurClass = class
+  //дані, доступні лише даному класу
+  private
+    //змінні, створені всередині класу, називаються ПОЛЯМИ
+    a:integer;
+    b:real;
+    workMemo:TMemo;
+    //процедури та функції, створені
+    //всередині класу, називаються МЕТОДАМИ
+    function getABValue(v:real):real;
+
+    //методи можуть ПЕРЕЗАВАНТАЖУВАТИСЯ, тобто два
+    //одноіменні методи можуть мати різні
+    //набори параметрів та імплементацію
+    procedure aSquared(var val:integer); overload;
+    procedure aSquared(var val:real);    overload;
+    //ця властивість називається ПОЛІМОРФІЗМ
+
+    //методи можуть взаємодіяти з властивостями (див. нижче)
+    function getA:integer;
+    procedure setA(av:integer);
+
+  //дані, доступні цьому класу і його нащадкам
+  protected
+
+
+  //дані, доступні як класу, так і ззовні класу
+  public
+    //поля як правило ховають у блоці private, а доступ до них
+    //забезпечують властивостями або методами
+
+    //властивості надають швидкий доступ до роботи з полями
+    property aVal: integer read a write a;
+    property bVal: real read b;
+
+    //ця властивість маніпулює a через методи
+    property aValAlt: integer read getA write setA;
+
+    //при створенні об'єкту виконується його КОНСТРУКТОР
+    constructor Create(pa:integer; pb:real; pMemo:TMemo);
+
+    procedure printAB(vMemo:TMemo); virtual;
+    procedure setB(vb:real);
+
+  //дані, доступні для зовнішнього ЗЧИТУВАННЯ
+  published
+
+  end;
+  //це - декларація типу класу. такі декларації мають бути
+  //імплементовані у розділі implementation
+
+  { TOurClassChild }
+  //цей клас є нащадком нашого оригінального класу
+  //і вдповідно має доступ до його публічних та захищених
+  //полів та методів, а також він може стврювати їх
+  //власні реалізації і додавати нові
+
+  TOurClassChild = class(TOurClass)
+    public
+     procedure printAB(vMemo:TMemo); override;
+     constructor Create(pa:integer; pb:real; pMemo:TMemo);
+  end;
+
+
   { TForm1 }
   //об'явлення типу нашої форми
   TForm1 = class(TForm)
@@ -25,12 +111,15 @@ type
     btnGeneralStuff: TButton;
     btnArrays: TButton;
     btnSubprograms: TButton;
+    btnClassOps: TButton;
     chbBoxFunc: TCheckBox;
     edProcName: TEdit;
     Label1: TLabel;
+    memoClassStuff: TMemo;
     memoData: TMemo;
     //перелік обробників для компонентів
     procedure btnArraysClick(Sender: TObject);
+    procedure btnClassOpsClick(Sender: TObject);
     procedure btnGeneralStuffClick(Sender: TObject);
     procedure btnSubprogramsClick(Sender: TObject);
   private
@@ -96,7 +185,7 @@ implementation
 //пишемо імплементації наших підпрограм
 procedure procedure_name(att1:integer;att2,att3:real; var att4:string);
 var a:integer; //внутрішні змінні
-  //об'явлені у цьолму блоці існють
+  //об'явлені у цьому блоці існують
   //виключно для даної підпрограми
 begin
   //процедура нічого нікому не повертає,
@@ -170,7 +259,7 @@ begin
   //ділення
   fc := fa / fb;
   ic := round(ia / ib); //не можна ділити цілі числа і записувати у int
-  fc := round(ia / ib);
+  fc := ia / ib;        //ділення повртає значення типу real
 
   //знаходження основної частини від ділення
   ic := ia div ib; //10 div 3 = 3
@@ -199,7 +288,8 @@ begin
   bRes:= ia > ib; //bRes = true
   bRes:= ia >= ib;//bRes = true
   bRes:= ia = ib; //bRes = false
-  //так можно перевіряти числа (int, float) та рядки
+  bRes:= ia <> ib;//bRes = true
+  //так можна перевіряти числа (int, float) та рядки
 
   // 2 - логічні оператори
   ba:=true; bb:=false; bc:=true;
@@ -419,7 +509,7 @@ begin
     //слід розраховувати самостійно
   end;
 
-  //масиви можуть містити дагі будь-якого типу:
+  //масиви можуть містити дані будь-якого типу:
   //від змінних та показчиків до об'єктів створени
   //класів, тож вони є незамінним інструментом
   //при робті з динамічними наборами об'єктів
@@ -430,6 +520,38 @@ begin
   //збільшити або зменшити довжину можна комбінацією
   //функції Length() та процедури SetLength()
   SetLength(fArrDynamic,Length(fArrDynamic)+1);
+end;
+
+procedure TForm1.btnClassOpsClick(Sender: TObject);
+var clsObj:TOurClass;
+    clsObjChild:TOurClassChild;
+    ta:integer;
+    v1:integer;
+    v2:real;
+begin
+  //тут наведено приклади операцій з класами
+  clsObj:=TOurClass.Create(10,8.3,memoClassStuff);
+
+  clsObj.aSquared(ta);
+  clsObj.aVal:=ta;
+
+  clsObj.printAB(memoClassStuff);
+
+  clsObj.aSquared(v1);
+  clsObj.aSquared(v2);
+
+  clsObj.aVal:=v1;
+  clsObj.setB(v2);
+
+  clsObj.printAB(memoClassStuff);
+
+  clsObjChild:=TOurClassChild.Create(5,1.2,memoClassStuff);
+  clsObjChild.printAB(memoClassStuff);
+
+
+  //дуже бажано ЗАВЖДИ видаляти свої об'єкти після того
+  //як вони були викристані
+  FreeAndNil(clsObj);
 end;
 
 procedure TForm1.btnSubprogramsClick(Sender: TObject);
@@ -467,6 +589,62 @@ begin
   //які всі є методами-членами об'єкту класу TForm1
 end;
 
+{TOurClass}
+//тут розміщуємо все що пов'язано з імплементацією
+//методів наших класів
+
+function TOurClass.getABValue(v:real):real;
+begin
+  result := a + b;
+end;
+procedure TOurClass.aSquared(var val:integer); overload;
+begin
+  val:=sqr(a);
+end;
+procedure TOurClass.aSquared(var val:real);    overload;
+begin
+  val:=real(sqr(a));
+end;
+function TOurClass.getA:integer;
+begin
+  result:=a;
+end;
+
+procedure TOurClass.setA(av:integer);
+begin
+  a:=av;
+end;
+
+procedure TOurClass.setB(vb:real);
+begin
+  b:=vb;
+end;
+
+constructor TOurClass.Create(pa:integer; pb:real; pMemo:TMemo);
+begin
+  a:=pa;
+  b:=pb;
+  workMemo:=pMemo;
+  printAB(workMemo);
+end;
+
+procedure TOurClass.printAB(vMemo:TMemo);
+begin
+  vMemo.Lines.Add('a='+inttostr(a)+'; b='+floattostr(b)+';');
+end;
+
+{ TOurClassChild }
+
+procedure TOurClassChild.printAB(vMemo:TMemo);
+begin
+  vMemo.Lines.Add('This is the new line!');
+  inherited printAB(vMemo);
+end;
+
+constructor TOurClassChild.Create(pa:integer; pb:real; pMemo:TMemo);
+begin
+  inherited Create(pa,pb,pMemo);
+end;
 
 end.
 

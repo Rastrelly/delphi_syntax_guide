@@ -68,4 +68,23 @@ object Form1: TForm1
     Caption = 'chbBoxFunc'
     TabOrder = 5
   end
+  object btnClassOps: TButton
+    Left = 10
+    Height = 25
+    Top = 192
+    Width = 99
+    Caption = 'btnClassOps'
+    OnClick = btnClassOpsClick
+    TabOrder = 6
+  end
+  object memoClassStuff: TMemo
+    Left = 112
+    Height = 90
+    Top = 127
+    Width = 150
+    Lines.Strings = (
+      'memoClassStuff'
+    )
+    TabOrder = 7
+  end
 end
